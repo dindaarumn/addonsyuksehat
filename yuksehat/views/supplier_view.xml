@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- yuksehat.supplier tree view -->
+    <record id="yuksehat_supplier_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Supplier</field>
+        <field name="model">yuksehat.supplier</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="alamat"/>
+                <field name="no_tlp"/>
+                <field name="obat_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- yuksehat.supplier form view -->
+    <record id="yuksehat_supplier_view_form" model="ir.ui.view">
+        <field name="name">Form Supplier</field>
+        <field name="model">yuksehat.supplier</field>
+        <field name="arch" type="xml">
+            <form string="Supplier">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="alamat"/>
+                        <field name="no_tlp"/>
+                    </group>
+                    <group name="obat" string="Obat">
+                        <field name="obat_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- yuksehat.supplier action window -->
+    <record id="yuksehat_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">yuksehat.supplier</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="yuksehat_supplier_menu_act" 
+              name="Supplier" 
+              parent="yuksehat_menu_root" 
+              action="yuksehat_supplier_action" 
+              sequence="40"/>
+
+</odoo>

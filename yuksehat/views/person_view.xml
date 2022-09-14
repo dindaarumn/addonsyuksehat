@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- yuksehat.person tree view -->
+    <record id="yuksehat_person_view_tree" model="ir.ui.view">
+        <field name="name">yuksehat.person.view.tree</field>
+        <field name="model">yuksehat.person</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="alamat"/>
+                <field name="tgl_lahir"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- yuksehat.person form view -->
+    <record id="yuksehat_person_view_form" model="ir.ui.view">
+        <field name="name">yuksehat.person.view.form</field>
+        <field name="model">yuksehat.person</field>
+        <field name="arch" type="xml">
+            <form string="Nama">
+                <sheet>
+                    <group name="nama" string="Nama">
+                        <field name="name"/>
+                    </group>
+                    <group name="data" string="Data">
+                        <field name="alamat"/>
+                        <field name="tgl_lahir"/>
+                        
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

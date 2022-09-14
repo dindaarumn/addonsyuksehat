@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- yuksehat.apoteker inherit tree view -->
+    <record id="yuksehat_apoteker_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Daftar Apoteker</field>
+        <field name="model">yuksehat.apoteker</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="yuksehat_person_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="id_apt"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- yuksehat.apoteker inherit form view -->
+    <record id="yuksehat_apoteker_view_form_inherit" model="ir.ui.view">
+        <field name="name">Form Apoteker</field>
+        <field name="model">yuksehat.apoteker</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="yuksehat_person_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                    <field name="id_apt"/>
+            </xpath>
+        </field>
+    </record>
+    <!-- yuksehat.apoteker action window -->
+    <record id="yuksehat_apoteker_action" model="ir.actions.act_window">
+        <field name="name">Daftar Apoteker</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">yuksehat.apoteker</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="yuksehat_apoteker_menu_act" 
+              name="Apoteker" 
+              parent="yuksehat_pegawai_menu_categ" 
+              action="yuksehat_apoteker_action" 
+              sequence="30"/>
+
+</odoo>

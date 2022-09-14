@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_yuksehat_kelompokobat,access.yuksehat.kelompokobat,model_yuksehat_kelompokobat,,1,1,1,1
+access_yuksehat_obat,access.yuksehat.obat,model_yuksehat_obat,,1,1,1,1
+access_yuksehat_person,access.yuksehat.person,model_yuksehat_person,,1,1,1,1
+access_yuksehat_kasir,access.yuksehat.kasir,model_yuksehat_kasir,,1,1,1,1
+access_yuksehat_apoteker,access.yuksehat.apoteker,model_yuksehat_apoteker,,1,1,1,1
+access_yuksehat_supplier,access.yuksehat.supplier,model_yuksehat_supplier,,1,1,1,1
+access_yuksehat_penjualan,access.yuksehat.penjualan,model_yuksehat_penjualan,,1,1,1,1
+access_yuksehat_detailpenjualan,access.yuksehat.detailpenjualan,model_yuksehat_detailpenjualan,,1,1,1,1
